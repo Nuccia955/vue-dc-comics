@@ -3,7 +3,7 @@
     <!-- HEADER -->
     <Header />
     <main>
-    
+      <Contents />
     </main>
 
     <!-- FOOTER -->
@@ -13,11 +13,13 @@
 
 <script>
 import Header from '@/components/Header.vue'
+import Contents from '@/components/Contents.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
+    Contents,
   }
 }
 </script>

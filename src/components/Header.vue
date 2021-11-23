@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style scopes lang="scss">
- @import '../styles/utilities.scss';
+@import '../styles/utilities.scss';
 
 header {
     font-size: 0.65em;
@@ -65,9 +65,9 @@ header {
         text-transform: uppercase;
         li {
             margin: 0 17px;
-        }
-        a {
-            text-decoration: none;
+            a {
+                text-decoration: none;
+            }
         }
     }
 }
