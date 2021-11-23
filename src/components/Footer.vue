@@ -5,15 +5,15 @@
             <div class="column">
                 <h3>DC Comics</h3>
                 <ul>
-                    <li>
-                        <a href="/">link</a>
+                    <li v-for="(link, index) in dcComicsLinks" :key="`comics-link ${index}`">
+                        <a :href="link.href">{{ link.text }}</a>
                     </li>
                 </ul>
 
                 <h3>Shop</h3>
                 <ul>
-                    <li>
-                        <a href="/">link</a>
+                    <li v-for="(link, index) in shopLinks" :key="`shop-link ${index}`">
+                        <a :href="link.href">{{ link.text }}</a>
                     </li>
                 </ul>
             </div>
@@ -21,18 +21,18 @@
             <div class="column">
                 <h3>DC</h3>
                 <ul>
-                    <li>
-                        <a href="">link</a>
-                        </li>
+                    <li v-for="(link, index) in dcLinks" :key="`dc-link ${index}`">
+                        <a :href="link.href">{{ link.text }}</a>
+                    </li>
                 </ul>
             </div>
 
             <div class="column">
                 <h3>Sites</h3>
                 <ul>
-                    <li>
-                        <a href="">link</a>
-                        </li>
+                    <li v-for="(link, index) in sites" :key="`sites-link ${index}`">
+                        <a :href="link.href">{{ link.text }}</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -44,14 +44,14 @@
 
     <div class="position-fixed">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="d-inline-block" href="/">Sign-Up Now!</a>
-            <nav>
+            <a class="d-inline-block btn" href="/">Sign-Up Now!</a>
+            <nav class="d-flex">
+                <a  class="follow-us" href="/">Follow Us</a>
                 <ul class="d-flex justify-content-end">
-                    <li>
-                        <a href="/">link</a>
-                    </li>
-                    <li>
-                        <a href="/">link</a>
+                    <li v-for="(link, index) in icons" :key="`icons-link ${index}`">
+                        <a :href="link.href">
+                            <img :src="link.src" alt="">
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -63,6 +63,150 @@
 <script>
 export default {
     name: 'Footer',
+    data() {
+        return {
+            dcComicsLinks: [
+                {
+                    text: 'Characters',
+                    href: '/',
+                    active: false,        
+                },
+                {
+                    text: 'Comics',
+                    href: '/',
+                    active: false,        
+                },
+                {
+                    text: 'Movies',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'TV',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'Games',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'Videos',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'News',
+                    href: '/',
+                    active: false,         
+                },
+            ],
+            shopLinks: [
+                {
+                    text: 'Shop DC',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'Shop DC Collectibles',
+                    href: '/',
+                    active: false,   
+                }
+            ],
+            dcLinks: [
+                {
+                    text: 'Terms Of Use',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'Privacy Policy (New)',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'Ad Choices',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'Advertising',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'Job',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'Subscriptions',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'Talent Workshops',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'CPSC Certificates',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'Ratings',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'Shop Help',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'Contact Us',
+                    href: '/',
+                    active: false,   
+                },
+            ],
+            sites: [
+                {
+                    text: 'DC',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'MAD Magazines',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'DC Kids',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'DC Universe',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    text: 'DC Power Visa',
+                    href: '/',
+                    active: false,   
+                },
+            ],
+            icons: [
+                {
+                    src: '../assets/footer-facebook.png',
+                    href: '/',
+                    active: false,
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -80,15 +224,17 @@ footer {
             h3 {
                     text-transform: uppercase;
                     color: #fff;
+                    margin-bottom: 12px;
                 }
             ul {
                 margin-bottom: 30px;
                 list-style: none;
                 li {
-                    padding: 12px 0;
+                    padding: 5px 0;
+                    font-size: 0.75em;
                     a {
                         text-decoration: none;
-                        color: #fff;
+                        color: #959595;
                     }
                 }
             }
@@ -107,6 +253,13 @@ footer {
             text-transform: uppercase;
             padding: 17px;
         }
+        a.follow-us {
+                    color: #0282f9;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    margin-right: 15px;
+                }
         ul {
             list-style: none;
             li {

@@ -6,35 +6,8 @@
 
        <nav class="flex-grow-1">
            <ul class="d-flex justify-content-end">
-               <li>
-                   <a href="/">Characters</a>
-               </li>
-               <li>
-                   <a href="/">Comics</a>
-               </li>
-               <li>
-                   <a href="/">Movies</a>
-               </li>
-               <li>
-                   <a href="/">TV</a>
-               </li>
-               <li>
-                   <a href="/">Games</a>
-               </li>
-               <li>
-                   <a href="/">Collectibles</a>
-               </li>
-               <li>
-                   <a href="/">Videos</a>
-               </li>
-               <li>
-                   <a href="/">Fans</a>
-               </li>
-               <li>
-                   <a href="/">News</a>
-               </li>
-               <li>
-                   <a href="/">Shop</a>
+               <li v-for="(link, index) in links" :key="`link-${index}`">
+                   <a :href="link.href">{{ link.text}}</a>
                </li>
            </ul>
        </nav>
@@ -44,6 +17,62 @@
 <script>
 export default {
     name: 'Header',
+    data() {
+        return {
+            links: [
+                {
+                    text: 'Characters',
+                    href: '/',
+                    active: false,        
+                },
+                {
+                    text: 'Comics',
+                    href: '/',
+                    active: false,        
+                },
+                {
+                    text: 'Movies',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'TV',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'Games',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'Collectibles',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'Videos',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'Fans',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'News',
+                    href: '/',
+                    active: false,         
+                },
+                {
+                    text: 'Shop',
+                    href: '/',
+                    active: false,         
+                },
+            ],
+        }   
+    }
 
 }
 </script>
