@@ -244,7 +244,7 @@ footer {
             ul {
                 margin-bottom: 30px;
                 li {
-                    padding: 5px 0;
+                    padding: 3px 0;
                     font-size: 0.75em;
                     a {
                         color: #959595;
