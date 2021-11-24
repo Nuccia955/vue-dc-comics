@@ -46,11 +46,33 @@
         <div class="container d-flex justify-content-between align-items-center">
             <a class="d-inline-block btn" href="/">Sign-Up Now!</a>
             <nav class="d-flex">
-                <a  class="follow-us" href="/">Follow Us</a>
-                <ul class="d-flex justify-content-end">
-                    <li v-for="(link, index) in icons" :key="`icons-link ${index}`">
-                        <a :href="link.href">
-                            <img :src="link.src" alt="">
+                <ul class="d-flex justify-content-end align-items-center">
+                    <li>
+                        <a  class="follow-us" href="/">Follow Us</a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="../assets/footer-facebook.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="../assets/footer-twitter.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="../assets/footer-youtube.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="../assets/footer-pinterest.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="../assets/footer-periscope.png" alt="facebook">
                         </a>
                     </li>
                 </ul>
@@ -198,13 +220,6 @@ export default {
                     active: false,   
                 },
             ],
-            icons: [
-                {
-                    src: '../assets/footer-facebook.png',
-                    href: '/',
-                    active: false,
-                }
-            ]
         }
     }
 }
@@ -228,13 +243,15 @@ footer {
                 }
             ul {
                 margin-bottom: 30px;
-                list-style: none;
                 li {
                     padding: 5px 0;
                     font-size: 0.75em;
                     a {
-                        text-decoration: none;
                         color: #959595;
+                        &:hover,
+                        &:active {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
@@ -253,21 +270,15 @@ footer {
             text-transform: uppercase;
             padding: 17px;
         }
-        a.follow-us {
-                    color: #0282f9;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    margin-right: 15px;
-                }
         ul {
-            list-style: none;
             li {
                 margin-right: 15px;
-                a {
-                    color: #fff;
-                    text-decoration: none;
-                }
+                a.follow-us {
+                            color: #0282f9;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            margin-right: 15px;
+                        }
             }
         }
     }

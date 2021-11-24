@@ -7,7 +7,7 @@
        <nav class="flex-grow-1">
            <ul class="d-flex justify-content-end">
                <li v-for="(link, index) in links" :key="`link-${index}`">
-                   <a :href="link.href">{{ link.text}}</a>
+                   <a  class="d-inline-block" :href="link.href">{{ link.text }}</a>
                </li>
            </ul>
        </nav>
@@ -81,7 +81,7 @@ export default {
 @import '../styles/utilities.scss';
 
 header {
-    font-size: 0.65em;
+    font-size: 0.7em;
     font-weight: 600;
     .logo {
         margin: 18px auto;
@@ -90,12 +90,16 @@ header {
         }
     }
     ul {
-        list-style: none;
         text-transform: uppercase;
         li {
             margin: 0 17px;
             a {
-                text-decoration: none;
+                color: #464657;
+
+                &:hover,
+                &:active {
+                    color: #0282f9;
+                }
             }
         }
     }

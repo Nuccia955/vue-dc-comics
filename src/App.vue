@@ -35,4 +35,13 @@ export default {
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
 </style>
