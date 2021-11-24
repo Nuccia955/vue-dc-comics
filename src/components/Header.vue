@@ -81,10 +81,11 @@ export default {
 @import '../styles/utilities.scss';
 
 header {
+    height: 120px;
     font-size: 0.7em;
     font-weight: 600;
     .logo {
-        margin: 18px auto;
+        margin: 20px auto;
         img {
             max-width: 80px;
         }
@@ -94,11 +95,14 @@ header {
         li {
             margin: 0 17px;
             a {
+                line-height: 116px;
+                border-bottom: 4px solid transparent;
                 color: #464657;
 
                 &:hover,
                 &:active {
                     color: #0282f9;
+                    border-bottom: 4px solid #0282f9;
                 }
             }
         }
