@@ -227,6 +227,7 @@ export default {
 
 <style scopes lang="scss">
 @import '../styles/utilities.scss';
+@import '../styles/colors.scss';
 
 footer {
     background-image: url('../assets/footer-bg.jpg');
@@ -247,7 +248,7 @@ footer {
                     padding: 3px 0;
                     font-size: 0.75em;
                     a {
-                        color: #959595;
+                        color: $footer_links;
                         &:hover,
                         &:active {
                             text-decoration: underline;
@@ -266,7 +267,7 @@ footer {
         & > div >  a {
             color: #fff;
             text-decoration: none;
-            border: 3px solid #0282f9;
+            border: 3px solid $brand_primary;
             text-transform: uppercase;
             padding: 17px;
         }
@@ -274,7 +275,7 @@ footer {
             li {
                 margin-right: 15px;
                 a.follow-us {
-                            color: #0282f9;
+                            color: $brand_primary;
                             text-transform: uppercase;
                             font-weight: 600;
                             margin-right: 15px;

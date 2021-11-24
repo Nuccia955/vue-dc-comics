@@ -79,6 +79,7 @@ export default {
 
 <style scopes lang="scss">
 @import '../styles/utilities.scss';
+@import '../styles/colors.scss';
 
 header {
     height: 120px;
@@ -97,12 +98,12 @@ header {
             a {
                 line-height: 116px;
                 border-bottom: 4px solid transparent;
-                color: #464657;
+                color: $header_links;
 
                 &:hover,
                 &:active {
-                    color: #0282f9;
-                    border-bottom: 4px solid #0282f9;
+                    color: $brand_primary;
+                    border-bottom: 4px solid currentColor;
                 }
             }
         }
