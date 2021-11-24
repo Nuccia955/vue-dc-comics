@@ -77,9 +77,9 @@ export default {
 }
 </script>
 
-<style scopes lang="scss">
-@import '../styles/utilities.scss';
-@import '../styles/colors.scss';
+<style lang="scss">
+@import '@/styles/utilities.scss';
+@import '@/styles/colors.scss';
 
 header {
     height: 120px;

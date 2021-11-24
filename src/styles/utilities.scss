@@ -28,6 +28,10 @@
     justify-content: space-between;
 }
 
+.justify-content-around {
+    justify-content: space-around;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -36,8 +40,16 @@
     flex-grow: 1;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .position-fixed {
     position: fixed;
+}
+
+.text-center {
+    text-align: center;
 }
 
 

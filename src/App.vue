@@ -5,7 +5,8 @@
 
     <!-- MAIN -->
     <main>
-      <Contents />
+      <Hero />
+      <Comics />
       <Tools />
     </main>
 
@@ -15,18 +16,20 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
-import Contents from '@/components/Contents.vue'
-import Footer from '@/components/Footer.vue'
-import Tools from '@/components/Tools.vue'
+import Header from '@/components/Header.vue';
+import Hero from '@/components/Hero.vue';
+import Comics from '@/components/Comics.vue';
+import Tools from '@/components/Tools.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Contents,
-    Footer,
+    Hero,
+    Comics,
     Tools,
+    Footer,
   }
 }
 </script>
