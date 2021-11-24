@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="d-flex container justify-content-between">
+    <div class="d-flex container justify-content-between align-items-center">
         <nav class="useful-links d-flex">
             <div class="column">
                 <h3>DC Comics</h3>
@@ -42,37 +42,15 @@
         </div>
     </div>
 
-    <div class="position-fixed">
+    <div>
         <div class="container d-flex justify-content-between align-items-center">
             <a class="d-inline-block btn" href="/">Sign-Up Now!</a>
-            <nav class="d-flex">
+            <nav class="d-flex align-items-center">
+                <span class="follow-us" href="/">Follow Us</span>
                 <ul class="d-flex justify-content-end align-items-center">
-                    <li>
-                        <a  class="follow-us" href="/">Follow Us</a>
-                    </li>
-                    <li>
-                        <a href="/">
-                            <img src="../assets/footer-facebook.png" alt="facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/">
-                            <img src="../assets/footer-twitter.png" alt="facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/">
-                            <img src="../assets/footer-youtube.png" alt="facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/">
-                            <img src="../assets/footer-pinterest.png" alt="facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/">
-                            <img src="../assets/footer-periscope.png" alt="facebook">
+                    <li v-for="(el, index) in social" :key="`social ${index}`">
+                        <a :href="el.href">
+                            <img :src="el.img" :alt="el.title">
                         </a>
                     </li>
                 </ul>
@@ -220,6 +198,38 @@ export default {
                     active: false,   
                 },
             ],
+            social: [
+                {
+                    img: require('@/assets/footer-facebook.png'),
+                    title: 'facebook',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    img: require('@/assets/footer-twitter.png'),
+                    title: 'twitter',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    img: require('@/assets/footer-youtube.png'),
+                    title: 'youtube',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    img: require('@/assets/footer-pinterest.png'),
+                    title: 'pinterest',
+                    href: '/',
+                    active: false,   
+                },
+                {
+                    img: require('@/assets/footer-periscope.png'),
+                    title: 'periscope',
+                    href: '/',
+                    active: false,   
+                },
+            ],
         }
     }
 }
@@ -233,6 +243,12 @@ footer {
     background-image: url('../assets/footer-bg.jpg');
     nav.useful-links {
         padding: 40px 0 60px 0;
+    }
+    & > div:first-child {
+        max-height: 375px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        overflow: hidden;
     }
     nav {
         .column {
@@ -259,8 +275,6 @@ footer {
         }
     }
     & > div:last-child {
-        width: 100%;
-        bottom: 0;
         background-color: #303030;
         padding: 30px 0;
 
@@ -271,15 +285,15 @@ footer {
             text-transform: uppercase;
             padding: 17px;
         }
+        .follow-us {
+            color: $brand_primary;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-right: 15px;
+        }
         ul {
             li {
                 margin-right: 15px;
-                a.follow-us {
-                            color: $brand_primary;
-                            text-transform: uppercase;
-                            font-weight: 600;
-                            margin-right: 15px;
-                        }
             }
         }
     }

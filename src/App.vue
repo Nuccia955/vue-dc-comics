@@ -6,6 +6,7 @@
     <!-- MAIN -->
     <main>
       <Contents />
+      <Tools />
     </main>
 
     <!-- FOOTER -->
@@ -17,6 +18,7 @@
 import Header from '@/components/Header.vue'
 import Contents from '@/components/Contents.vue'
 import Footer from '@/components/Footer.vue'
+import Tools from '@/components/Tools.vue'
 
 export default {
   name: 'App',
@@ -24,6 +26,7 @@ export default {
     Header,
     Contents,
     Footer,
+    Tools,
   }
 }
 </script>
@@ -34,6 +37,10 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+}
+
+#app {
+  cursor: default;
 }
 
 a {
